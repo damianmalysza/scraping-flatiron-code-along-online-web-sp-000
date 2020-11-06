@@ -22,8 +22,8 @@ class Scraper
 
     doc.css(".post").each do |post|
       Course.new.tap |course|
-
-    end
+        
+      end
     end
   end
 
