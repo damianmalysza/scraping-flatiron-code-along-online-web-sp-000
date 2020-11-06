@@ -26,9 +26,9 @@ class Scraper
   end
 
   def make_courses
-    self.get_courses.each do |course_xml|
+    self.get_courses.each do |post|
       Course.new.tap do |course|
-        
+        course.title = post.css("h2").text
       end
     end
   end
