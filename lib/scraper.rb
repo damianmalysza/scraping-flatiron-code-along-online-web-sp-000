@@ -22,7 +22,8 @@ class Scraper
 
     doc.css(".post").each do |post|
       Course.new.tap |course|
-        
+        course.title = post.css("h2").text
+        course.schedule = post.css(".date").text
       end
     end
   end
