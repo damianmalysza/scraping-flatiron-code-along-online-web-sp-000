@@ -3,4 +3,8 @@ class Course
 
   def self.reset_all
   end
+
+  def self.all
+
+  end
 end
