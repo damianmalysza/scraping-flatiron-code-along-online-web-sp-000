@@ -29,7 +29,7 @@ class Scraper
     self.get_courses.each do |post|
       Course.new.tap do |course|
         course.title = post.css("h2").text
-        course.schedule = post.css("")
+        course.schedule = post.css(".date").text
       end
     end
   end
