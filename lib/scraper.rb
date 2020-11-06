@@ -22,15 +22,8 @@ class Scraper
   end
 
   def get_courses
-    get_page.css(".post").each do |post|
-      Course.new.tap do |course|
-        course.title = post.css("h2").text
-        course.schedule = post.css(".date").text
-        course.description = post.css("p").text
-      end
-    end
+    self.get_page.css(".post")
   end
-
   def make_courses
 
   end
