@@ -30,6 +30,7 @@ class Scraper
       Course.new.tap do |course|
         course.title = post.css("h2").text
         course.schedule = post.css(".date").text
+        course.description = post.css("")
       end
     end
   end
