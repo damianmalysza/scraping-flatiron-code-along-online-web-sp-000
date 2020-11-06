@@ -27,7 +27,9 @@ class Scraper
 
   def make_courses
     self.get_courses.each do |course_xml|
-      Course.new.tap |course
+      Course.new.tap do |course|
+
+      end
     end
   end
 
